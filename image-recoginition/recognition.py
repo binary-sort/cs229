@@ -1,7 +1,6 @@
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-import time
 from collections import Counter
 
 from matplotlib import style
@@ -79,14 +78,11 @@ def whatNumIsThis(filePath):
     graphX = []
     graphY = []
 
-    ylimi = 0
-
     for eachThing in x:
         graphX.append(eachThing)
         graphY.append(x[eachThing])
-        ylimi = x[eachThing]
 
-    fig = plt.figure()
+    plt.figure()
     ax1 = plt.subplot2grid((4, 4), (0, 0), rowspan=1, colspan=4)
     ax2 = plt.subplot2grid((4, 4), (1, 0), rowspan=3, colspan=4)
 
